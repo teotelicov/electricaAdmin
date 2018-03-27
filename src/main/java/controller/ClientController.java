@@ -24,7 +24,11 @@ public class ClientController {
             return "Name or address cannot be empty!";
         }
     }
-    
+
+    public DataManager get_dataManager() {
+        return _dataManager;
+    }
+
     public String AddClient(String name, String address, String id){
         //validation
         String valid;
