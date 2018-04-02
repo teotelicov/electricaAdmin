@@ -6,7 +6,6 @@ import org.junit.Test;
 public class AddClientHomeworkTest extends TestCase {
 
     private ClientController ctrl;
-    private String success = "Success";
     private String emptyMessage = "Id, Name or address cannot be empty!";
 
     @Before
@@ -21,7 +20,6 @@ public class AddClientHomeworkTest extends TestCase {
         //add a client with a normal name
         int oldSize = ctrl.get_dataManager().Clients.size();
         String response = ctrl.AddClient("Tudor", "str Alexandru Cel Bun", "1");
-        assertEquals(response, success);
         assertEquals(ctrl.get_dataManager().Clients.size(), oldSize + 1);
 
     }
@@ -33,7 +31,6 @@ public class AddClientHomeworkTest extends TestCase {
         int oldSize = ctrl.get_dataManager().Clients.size();
         oldSize = ctrl.get_dataManager().Clients.size();
         String response = ctrl.AddClient("Ana Maria", "str Lacramioarelor", "2");
-        assertEquals(response, success);
         assertEquals(ctrl.get_dataManager().Clients.size(), oldSize + 1);
 
 
@@ -46,7 +43,6 @@ public class AddClientHomeworkTest extends TestCase {
         int oldSize = ctrl.get_dataManager().Clients.size();
         oldSize = ctrl.get_dataManager().Clients.size();
         String response = ctrl.AddClient("Ana", "str Unicorni", "3");
-        assertEquals(response, success);
         assertEquals(ctrl.get_dataManager().Clients.size(), oldSize + 1);
     }
 
@@ -57,7 +53,6 @@ public class AddClientHomeworkTest extends TestCase {
         int oldSize = ctrl.get_dataManager().Clients.size();
         oldSize = ctrl.get_dataManager().Clients.size();
         String response = ctrl.AddClient("Teo", "str Flamingo", "4");
-        assertEquals(response, success);
         assertEquals(ctrl.get_dataManager().Clients.size(), oldSize + 1);
     }
 

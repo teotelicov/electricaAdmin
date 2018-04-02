@@ -1,1 +1,8 @@
-
+Tudor,        str Alexandru Cel Bun,        1
+Ana Maria,       str Lacramioarelor,       2
+Ana,      str Unicorni,      3
+Teo,     str Flamingo,     4
+haha,    haha,    
+test,   test,   test
+Elena,  str Nicaieri,  5
+Elena, str Nicaieri, 5?
