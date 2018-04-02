@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4feccde-89e8-47b8-95ea-9d3928a57c07" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/AddClientHomeworkTest.class" afterPath="$PROJECT_DIR$/target/test-classes/AddClientHomeworkTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java" afterPath="$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -111,8 +108,8 @@
       <file leaf-file-name="AddClientHomeworkTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="139" column="71" lean-forward="true" selection-start-line="136" selection-start-column="9" selection-end-line="139" selection-end-column="71" />
+            <state relative-caret-position="861">
+              <caret line="143" column="0" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="143" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -551,7 +548,7 @@
       <workItem from="1522576916538" duration="3000" />
       <workItem from="1522693307116" duration="2652000" />
       <workItem from="1522692400614" duration="3974000" />
-      <workItem from="1522700001392" duration="659000" />
+      <workItem from="1522700001392" duration="875000" />
     </task>
     <servers />
   </component>
@@ -588,7 +585,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15139000" />
+    <option name="totallyTimeSpent" value="15355000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1106,8 +1103,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="139" column="71" lean-forward="true" selection-start-line="136" selection-start-column="9" selection-end-line="139" selection-end-column="71" />
+        <state relative-caret-position="861">
+          <caret line="143" column="0" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="143" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
