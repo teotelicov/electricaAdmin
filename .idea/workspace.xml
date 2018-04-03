@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4feccde-89e8-47b8-95ea-9d3928a57c07" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client.txt" afterPath="$PROJECT_DIR$/client.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="client.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -83,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+            <state relative-caret-position="255">
+              <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -109,7 +111,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2108">
-              <caret line="124" column="2" lean-forward="true" selection-start-line="124" selection-start-column="2" selection-end-line="124" selection-end-column="2" />
+              <caret line="124" column="2" lean-forward="false" selection-start-line="124" selection-start-column="2" selection-end-line="124" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,9 +163,9 @@
         <option value="$PROJECT_DIR$/src/main/java/controller/ClientController.java" />
         <option value="$PROJECT_DIR$/src/test/java/AddClientTest.java" />
         <option value="$PROJECT_DIR$/issue.txt" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java" />
         <option value="$PROJECT_DIR$/client.txt" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -322,7 +324,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="SearchEverywhereHistoryKey" value="execute ma&#9;ACTION&#9;Maven.ExecuteGoal&#10;Termina&#9;ACTION&#9;ActivateTerminalToolWindow" />
+    <property name="SearchEverywhereHistoryKey" value="goal&#9;ACTION&#9;Maven.ExecuteGoal&#10;execute ma&#9;ACTION&#9;Maven.ExecuteGoal&#10;Termina&#9;ACTION&#9;ActivateTerminalToolWindow" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -549,7 +551,7 @@
       <workItem from="1522576916538" duration="3000" />
       <workItem from="1522693307116" duration="2652000" />
       <workItem from="1522692400614" duration="3974000" />
-      <workItem from="1522700001392" duration="1654000" />
+      <workItem from="1522700001392" duration="2783000" />
     </task>
     <servers />
   </component>
@@ -560,11 +562,11 @@
     <history-entry file="AddClientHomeworkTest_testAddClient1 - 2018.04.02 at 23h 46m 01s.xml">
       <configuration name="AddClientHomeworkTest.testAddClient1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AddClientHomeworkTest_testAddClient12 - 2018.04.02 at 22h 43m 31s.xml">
-      <configuration name="AddClientHomeworkTest.testAddClient12" configurationId="JUnit" />
+    <history-entry file="AddClientHomeworkTest_testAddClient1 - 2018.04.02 at 23h 49m 29s.xml">
+      <configuration name="AddClientHomeworkTest.testAddClient1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AddClientHomeworkTest_testAddClient6 - 2018.04.02 at 22h 42m 58s.xml">
-      <configuration name="AddClientHomeworkTest.testAddClient6" configurationId="JUnit" />
+    <history-entry file="AddClientHomeworkTest_testAddClient1 - 2018.04.02 at 23h 49m 34s.xml">
+      <configuration name="AddClientHomeworkTest.testAddClient1" configurationId="JUnit" />
     </history-entry>
     <history-entry file="AddClientHomeworkTest_testAddClient7 - 2018.04.02 at 22h 43m 02s.xml">
       <configuration name="AddClientHomeworkTest.testAddClient7" configurationId="JUnit" />
@@ -586,7 +588,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16134000" />
+    <option name="totallyTimeSpent" value="17263000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1033,32 +1035,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/DataManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="104" column="16" lean-forward="false" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ui/ElectricaUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/ClientController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1078,10 +1054,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        <state relative-caret-position="2108">
+          <caret line="124" column="2" lean-forward="false" selection-start-line="124" selection-start-column="2" selection-end-line="124" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ui/ElectricaUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/DataManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="104" column="16" lean-forward="false" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1094,20 +1098,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="124" column="2" lean-forward="true" selection-start-line="124" selection-start-column="2" selection-end-line="124" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1191,6 +1193,7 @@
   </component>
   <component name="mavenExecuteGoalHistory">
     <option value="$PROJECT_DIR$" />
+    <option value="compile" />
     <option value="dependency::tree" />
   </component>
 </project>
