@@ -13,10 +13,21 @@ public class ClientController {
     }
     
     private String ValidateClient(String name, String address, String id){
-        if(!name.equals("") && !address.equals("") && !name.equals(" ")){
+        if(!name.equals("") && !address.equals("") && !id.equals("")){
             for(int i=0;i<name.length();i++){
                 if((!Character.isUpperCase(name.charAt(i))) && (!Character.isLowerCase(name.charAt(i))) && (!Character.isSpaceChar(name.charAt(i)))){
                     return "Invalid character: " + name.charAt(i);
+                }
+            }
+            //repair address and id validation
+            for(int i=0;i<address.length();i++){
+                if((!Character.isUpperCase(address.charAt(i))) && (!Character.isLowerCase(address.charAt(i))) && (!Character.isSpaceChar(address.charAt(i)))){
+                    return "Invalid character: " + address.charAt(i);
+                }
+            }
+            for(int i=0;i<id.length();i++){
+                if((!Character.isUpperCase(id.charAt(i))) && (!Character.isLowerCase(id.charAt(i))) && (!Character.isSpaceChar(id.charAt(i)))){
+                    return "Invalid character: " + address.charAt(i);
                 }
             }
             return null;

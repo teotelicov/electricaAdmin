@@ -38,68 +38,64 @@ public class AddClientHomeworkTest extends TestCase {
         assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
 
     }
-//
-//    @Test
-//    public void testAddClient3() throws Exception {
-//
-//        //add a client with a normal name
-//        int oldSize = ctrl.get_dataManager().Clients.size();
-//        oldSize = ctrl.get_dataManager().Clients.size();
-//        String response = ctrl.AddClient("Ana", "str Unicorni", "3");
-//        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize + 1);
-//    }
-//
-//    @Test
-//    public void testAddClient4() throws Exception {
-//
-//        //add a client with a normal name
-//        int oldSize = ctrl.get_dataManager().Clients.size();
-//        oldSize = ctrl.get_dataManager().Clients.size();
-//        String response = ctrl.AddClient("Teo", "str Flamingo", "4");
-//        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize + 1);
-//    }
-//
-//    @Test
-//    public void testAddClient5() throws Exception {
-//
-//        //name is empty
-//        int oldSize = ctrl.get_dataManager().Clients.size();
-//        String response = ctrl.AddClient("", "haha", "haha");
-//        assertEquals(response, emptyMessage);
-//        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
-//    }
-//
-//    @Test
-//    public void testAddClient6() throws Exception {
-//
-//        //address is empty
-//        int oldSize = ctrl.get_dataManager().Clients.size();
-//        String response = ctrl.AddClient("haha", "", "haha");
-//        assertEquals(response, emptyMessage);
-//        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
-//    }
-//
-//    @Test
-//    public void testAddClient7() throws Exception {
-//
-//        //id is empty
-//        int oldSize = ctrl.get_dataManager().Clients.size();
-//        String response = ctrl.AddClient("haha", "haha", "");
-//        assertEquals(response, emptyMessage);
-//        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
-//    }
-//
-//    @Test
-//    public void testAddClient8() throws Exception {
-//
-//        //client already exist
-//        int oldSize = ctrl.get_dataManager().Clients.size();
-//        ctrl.AddClient("test", "test", "test");
-//        String response = ctrl.AddClient("test", "test", "test");
-//        String alreadyExistsMessage = "Client already exists!";
-//        assertEquals(response, alreadyExistsMessage);
-//        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize + 1);
-//    }
+
+    @Test
+    public void testAddClient3() throws Exception {
+
+        //address is empty
+        int oldSize = ctrl.get_dataManager().Clients.size();
+        String response = ctrl.AddClient("haha", "", "haha");
+        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
+    }
+
+    @Test
+    public void testAddClient4() throws Exception {
+
+        //id is empty
+        int oldSize = ctrl.get_dataManager().Clients.size();
+        String response = ctrl.AddClient("haha", "haha", "");
+        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
+    }
+
+    @Test
+    public void testAddClient5() throws Exception {
+
+        //client already exist
+        int oldSize = ctrl.get_dataManager().Clients.size();
+        ctrl.AddClient("test", "test", "test");
+        String response = ctrl.AddClient("test", "test", "test");
+        String alreadyExistsMessage = "Client already exists!";
+        assertEquals(response, alreadyExistsMessage);
+        //assertEquals(ctrl.get_dataManager().Clients.size(), oldSize + 1);
+    }
+
+    @Test
+    public void testAddClient6() throws Exception {
+
+        //name contains illegal character
+        int oldSize = ctrl.get_dataManager().Clients.size();
+        String response = ctrl.AddClient("Elena?", "str Nicaieri", "5");
+        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
+    }
+
+    @Test
+    public void testAddClient7() throws Exception {
+
+
+        //address contains illegal character
+        int oldSize = ctrl.get_dataManager().Clients.size();
+        String response = ctrl.AddClient("Elena", "str Nicaieri?", "5");
+        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
+    }
+
+    @Test
+    public void testAddClient8() throws Exception {
+
+        //id contains illegal character
+        int oldSize = ctrl.get_dataManager().Clients.size();
+        String response = ctrl.AddClient("Elena", "str Nicaieri", "5?");
+        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
+    }
 //
 //    @Test
 //    public void testAddClient9() throws Exception {
