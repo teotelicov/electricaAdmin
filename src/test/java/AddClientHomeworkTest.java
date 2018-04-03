@@ -19,9 +19,10 @@ public class AddClientHomeworkTest extends TestCase {
     public void testAddClient1() throws Exception {
 
         //add a client with a normal name
+        System.out.println(ctrl.get_dataManager().Clients.size());
         int oldSize = ctrl.get_dataManager().Clients.size();
         String response = ctrl.AddClient("Tudor", "str Alexandru Cel Bun", "1");
-        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize + 1);
+        assertEquals(response, null);
 
     }
 
