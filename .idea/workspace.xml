@@ -108,8 +108,8 @@
       <file leaf-file-name="AddClientHomeworkTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+            <state relative-caret-position="405">
+              <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,7 +143,11 @@
       <find>success</find>
       <find>surefire</find>
       <find>Client a</find>
+      <find>client alread</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -555,7 +559,7 @@
       <workItem from="1522576916538" duration="3000" />
       <workItem from="1522693307116" duration="2652000" />
       <workItem from="1522692400614" duration="3974000" />
-      <workItem from="1522700001392" duration="7166000" />
+      <workItem from="1522700001392" duration="7822000" />
     </task>
     <servers />
   </component>
@@ -592,7 +596,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21646000" />
+    <option name="totallyTimeSpent" value="22302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1110,8 +1114,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        <state relative-caret-position="405">
+          <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

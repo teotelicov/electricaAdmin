@@ -14,6 +14,7 @@ public class AddClientHomeworkTest extends TestCase {
     public void setUp() throws Exception{
         super.setUp();
         ctrl = new ClientController();
+        ctrl.AddClient("Tudor", "str Alexandru Cel Bun", "1");
     }
 
     @Test
@@ -23,7 +24,7 @@ public class AddClientHomeworkTest extends TestCase {
         System.out.println(ctrl.get_dataManager().Clients.size());
         int oldSize = ctrl.get_dataManager().Clients.size();
         String response = ctrl.AddClient("Tudor", "str Alexandru Cel Bun", "1");
-        assertEquals(response, null);
+        assertEquals(response, "Client already exists!");
 
     }
 
