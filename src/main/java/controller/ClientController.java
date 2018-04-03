@@ -13,6 +13,8 @@ public class ClientController {
     }
     
     private String ValidateClient(String name, String address, String id){
+        if(name.length() > 50)
+            return "Name is too long";
         if(!name.equals("") && !address.equals("") && !id.equals("")){
             for(int i=0;i<name.length();i++){
                 if((!Character.isUpperCase(name.charAt(i))) && (!Character.isLowerCase(name.charAt(i))) && (!Character.isSpaceChar(name.charAt(i)))){

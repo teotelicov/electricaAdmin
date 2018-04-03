@@ -96,37 +96,67 @@ public class AddClientHomeworkTest extends TestCase {
         String response = ctrl.AddClient("Elena", "str Nicaieri", "5?");
         assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
     }
-//
-//    @Test
-//    public void testAddClient9() throws Exception {
-//
-//        //name contains illegal character
-//        //address is empty
-//        int oldSize = ctrl.get_dataManager().Clients.size();
-//        String response = ctrl.AddClient("Elena", "str Nicaieri", "5");
-//        assertEquals(response, emptyMessage);
-//        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
-//    }
-//
-//    @Test
-//    public void testAddClient10() throws Exception {
-//
-//        //name contains illegal character
-//        int oldSize = ctrl.get_dataManager().Clients.size();
-//        String response = ctrl.AddClient("Elena?", "str Nicaieri", "5");
-//        assertEquals(response, emptyMessage);
-//        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
-//    }
-//
-//    @Test
-//    public void testAddClient11() throws Exception {
-//
-//        //address contains illegal character
-//        int oldSize = ctrl.get_dataManager().Clients.size();
-//        String response = ctrl.AddClient("Elena", "str Nicaieri?", "5");
-//        assertEquals(response, emptyMessage);
-//        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
-//    }
+
+    @Test
+    public void testAddClient9() throws Exception {
+
+        StringBuilder s = new StringBuilder();
+        try{
+            //name too long
+
+            for(int i = 0; i < Integer.MAX_VALUE; i++) {
+                s.append('a');
+            }
+            int oldSize = ctrl.get_dataManager().Clients.size();
+            String response = ctrl.AddClient(s.toString(), "str Nicaieri", "5");
+            assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
+        } catch (OutOfMemoryError e){
+            s = new StringBuilder();
+            assertTrue(true);
+            System.out.println(e.getMessage());
+        }
+
+    }
+
+    @Test
+    public void testAddClient10() throws Exception {
+
+        StringBuilder s = new StringBuilder();
+        try{
+            //address too long
+
+            for(int i = 0; i < Integer.MAX_VALUE; i++) {
+                s.append('a');
+            }
+            int oldSize = ctrl.get_dataManager().Clients.size();
+            String response = ctrl.AddClient("Haleluia", s.toString(), "5");
+            assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
+        } catch (OutOfMemoryError e){
+            s = new StringBuilder();
+            assertTrue(true);
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @Test
+    public void testAddClient11() throws Exception {
+
+        StringBuilder s = new StringBuilder();
+        try{
+            //id too long
+
+            for(int i = 0; i < Integer.MAX_VALUE; i++) {
+                s.append('a');
+            }
+            int oldSize = ctrl.get_dataManager().Clients.size();
+            String response = ctrl.AddClient("Haleluia", "str Nicaieri", s.toString());
+            assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
+        } catch (OutOfMemoryError e){
+            s = new StringBuilder();
+            assertTrue(true);
+            System.out.println(e.getMessage());
+        }
+    }
 //
 //    @Test
 //    public void testAddClient12() throws Exception {
