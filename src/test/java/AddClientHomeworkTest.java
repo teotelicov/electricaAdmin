@@ -1,5 +1,6 @@
 import controller.ClientController;
 import junit.framework.TestCase;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,6 +25,11 @@ public class AddClientHomeworkTest extends TestCase {
         String response = ctrl.AddClient("Tudor", "str Alexandru Cel Bun", "1");
         assertEquals(response, null);
 
+    }
+
+    @After
+    public void tearDown() throws Exception {
+        System.out.println("Test Completed");
     }
 
 //    @Test
