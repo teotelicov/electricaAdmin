@@ -2,6 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4feccde-89e8-47b8-95ea-9d3928a57c07" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/App.class" afterPath="$PROJECT_DIR$/target/classes/App.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/ClientController.class" afterPath="$PROJECT_DIR$/target/classes/controller/ClientController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Client.class" afterPath="$PROJECT_DIR$/target/classes/model/Client.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Issue.class" afterPath="$PROJECT_DIR$/target/classes/model/Issue.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/repository/DataManager.class" afterPath="$PROJECT_DIR$/target/classes/repository/DataManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ui/ElectricaUI.class" afterPath="$PROJECT_DIR$/target/classes/ui/ElectricaUI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/AddClientHomeworkTest.class" afterPath="$PROJECT_DIR$/target/test-classes/AddClientHomeworkTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/AddClientTest.class" afterPath="$PROJECT_DIR$/target/test-classes/AddClientTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client.txt" afterPath="$PROJECT_DIR$/client.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java" afterPath="$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -108,8 +118,8 @@
       <file leaf-file-name="AddClientHomeworkTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+            <state relative-caret-position="164">
+              <caret line="36" column="51" lean-forward="false" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -559,17 +569,11 @@
       <workItem from="1522576916538" duration="3000" />
       <workItem from="1522693307116" duration="2652000" />
       <workItem from="1522692400614" duration="3974000" />
-      <workItem from="1522700001392" duration="7822000" />
+      <workItem from="1522700001392" duration="8922000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AddClientHomeworkTest - 2018.04.03 at 12h 20m 40s.xml">
-      <configuration name="AddClientHomeworkTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AddClientHomeworkTest - 2018.04.03 at 12h 21m 02s.xml">
-      <configuration name="AddClientHomeworkTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AddClientHomeworkTest - 2018.04.03 at 12h 21m 57s.xml">
       <configuration name="AddClientHomeworkTest" configurationId="JUnit" />
     </history-entry>
@@ -591,12 +595,18 @@
     <history-entry file="AddClientHomeworkTest - 2018.04.03 at 12h 27m 31s.xml">
       <configuration name="AddClientHomeworkTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AddClientHomeworkTest - 2018.04.03 at 13h 17m 14s.xml">
+      <configuration name="AddClientHomeworkTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AddClientHomeworkTest - 2018.04.03 at 13h 17m 24s.xml">
+      <configuration name="AddClientHomeworkTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="Prj_3_ElectricaAdmin - 2018.04.03 at 12h 45m 29s.xml">
       <configuration name="Prj_3_ElectricaAdmin" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22302000" />
+    <option name="totallyTimeSpent" value="23402000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -611,7 +621,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5104167" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.48958334" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.48958334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -625,7 +635,7 @@
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997879" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven test results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33297986" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven test results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33297986" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1114,8 +1124,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+        <state relative-caret-position="164">
+          <caret line="36" column="51" lean-forward="false" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -13,37 +13,32 @@ public class AddClientHomeworkTest extends TestCase {
     @Before
     public void setUp() throws Exception{
         super.setUp();
+
         ctrl = new ClientController();
+        //add a client with a normal name
         ctrl.AddClient("Tudor", "str Alexandru Cel Bun", "1");
+        //add a client with a name with spaces
+        ctrl.AddClient("Ana Maria", "str Lacramioarelor", "2");
+
     }
 
     @Test
     public void testAddClient1() throws Exception {
 
-        //add a client with a normal name
-        System.out.println(ctrl.get_dataManager().Clients.size());
+        assertEquals(ctrl.get_dataManager().Clients.size(), 0);
+
+    }
+
+    @Test
+    public void testAddClient2() throws Exception {
+
+        //name is empty
         int oldSize = ctrl.get_dataManager().Clients.size();
-        String response = ctrl.AddClient("Tudor", "str Alexandru Cel Bun", "1");
-        assertEquals(response, "Client already exists!");
+        String response = ctrl.AddClient("", "haha", "haha");
+        assertEquals(response, emptyMessage);
+        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
 
     }
-
-    @After
-    public void tearDown() throws Exception {
-        System.out.println("Test Completed");
-    }
-
-//    @Test
-//    public void testAddClient2() throws Exception {
-//
-//        //add a client with a name with spaces
-//        int oldSize = ctrl.get_dataManager().Clients.size();
-//        oldSize = ctrl.get_dataManager().Clients.size();
-//        String response = ctrl.AddClient("Ana Maria", "str Lacramioarelor", "2");
-//        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize + 1);
-//
-//
-//    }
 //
 //    @Test
 //    public void testAddClient3() throws Exception {
@@ -148,4 +143,8 @@ public class AddClientHomeworkTest extends TestCase {
 //        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
 //    }
 
+    @After
+    public void tearDown() throws Exception {
+        System.out.println("Test Completed");
+    }
 }
