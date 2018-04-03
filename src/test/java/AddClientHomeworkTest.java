@@ -16,7 +16,7 @@ public class AddClientHomeworkTest extends TestCase {
     }
 
     @Test
-    public void testAddClient() throws Exception {
+    public void testAddClient1() throws Exception {
 
         //add a client with a normal name
         int oldSize = ctrl.get_dataManager().Clients.size();
