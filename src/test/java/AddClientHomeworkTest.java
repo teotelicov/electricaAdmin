@@ -25,7 +25,7 @@ public class AddClientHomeworkTest extends TestCase {
     @Test
     public void testAddClient1() throws Exception {
 
-        assertEquals(ctrl.get_dataManager().Clients.size(), 0);
+        assertEquals(ctrl.get_dataManager().Clients.size(), 2);
 
     }
 
@@ -35,7 +35,6 @@ public class AddClientHomeworkTest extends TestCase {
         //name is empty
         int oldSize = ctrl.get_dataManager().Clients.size();
         String response = ctrl.AddClient("", "haha", "haha");
-        assertEquals(response, emptyMessage);
         assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
 
     }
