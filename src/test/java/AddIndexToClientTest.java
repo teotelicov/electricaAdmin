@@ -26,7 +26,7 @@ public class AddIndexToClientTest extends TestCase {
         int oldSize = ctrl.get_dataManager().Issues.size();
         Client c = new Client ("test","test","test");
         String response = ctrl.AddClientIndex(c,-3,12,150);
-        assertEquals(ctrl.get_dataManager().Issues,oldSize);
+        assertEquals(ctrl.get_dataManager().Issues.size(),oldSize);
 
     }
 
@@ -36,7 +36,7 @@ public class AddIndexToClientTest extends TestCase {
         int oldSize = ctrl.get_dataManager().Issues.size();
         Client c = new Client ("test","test","test");
         String response = ctrl.AddClientIndex(c,2018,-2,150);
-        assertEquals(ctrl.get_dataManager().Issues,oldSize );
+        assertEquals(ctrl.get_dataManager().Issues.size(),oldSize );
 
     }
 }
