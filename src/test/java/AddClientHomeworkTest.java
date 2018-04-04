@@ -27,7 +27,7 @@ public class AddClientHomeworkTest extends TestCase {
 
         //name is empty
         int oldSize = ctrl.get_dataManager().Clients.size();
-        String response = ctrl.AddClient("", "haha", "haha");
+        String response = ctrl.AddClient("haha", "", "haha");
         assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
 
     }
