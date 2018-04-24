@@ -33,7 +33,7 @@ public class DataManager {
     
     private void LoadClient(){
         try{
-            BufferedReader br = new BufferedReader(new FileReader(fileClient)); 
+            BufferedReader br = new BufferedReader(new FileReader(fileClient));
             String line;
             while((line = br.readLine()) != null){
                 List<String> client_list = Arrays.asList(line.split(","));

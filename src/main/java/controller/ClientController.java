@@ -11,30 +11,26 @@ public class ClientController {
     public ClientController(){
         _dataManager = new DataManager();
     }
-    
+
     private String ValidateClient(String name, String address, String id){
-        if(name.length() > 50)
-            return "Name is too long";
+        boolean hasAlpha = false;
         if(!name.equals("") && !address.equals("") && !id.equals("")){
-            for(int i=0;i<name.length();i++){
+            for(int i=0; i<name.length(); i++){
                 if((!Character.isUpperCase(name.charAt(i))) && (!Character.isLowerCase(name.charAt(i))) && (!Character.isSpaceChar(name.charAt(i)))){
                     return "Invalid character: " + name.charAt(i);
                 }
-            }
-            //repair address and id validation
-            for(int i=0;i<address.length();i++){
-                if((!Character.isUpperCase(address.charAt(i))) && (!Character.isLowerCase(address.charAt(i))) && (!Character.isSpaceChar(address.charAt(i)))){
-                    return "Invalid character: " + address.charAt(i);
+                if (Character.isAlphabetic(name.charAt(i))) {
+                    hasAlpha = true;
                 }
             }
-            for(int i=0;i<id.length();i++){
-                if((!Character.isUpperCase(id.charAt(i))) && (!Character.isLowerCase(id.charAt(i))) && (!Character.isSpaceChar(id.charAt(i)))){
-                    return "Invalid character: " + address.charAt(i);
-                }
+
+            if(!hasAlpha) {
+                return "Id, Name or address cannot be empty!";
             }
             return null;
+
         }else{
-            return "Name or address cannot be empty!";
+            return "Id, Name or address cannot be empty!";
         }
     }
 
@@ -65,47 +61,57 @@ public class ClientController {
     }
     
     public String AddClientIndex(Client c, int year, int month, float toPay){
+        String result = "";
         if(year > 0){
             if(month > 0){
                 if(toPay >= 0){
-                    //validate client attributes
-                    String valid;
-                    if((valid = ValidateClient(c.Name, c.Address, c.idClient)) == null){
+                    if(ValidateClient(c.Name, c.Address, c.idClient) == null){
                         //check if client exist
                         Boolean exist = false;
+
+                        if (_dataManager.Clients.isEmpty()) {
+                            return "Client does not exist!";
+                        }
+
                         for(int i=0; i<_dataManager.Clients.size(); i++){
                             if(_dataManager.Clients.get(i).equals(c)){
                                 exist = true;
                                 break;
                             }
                         }
+
                         if(exist){
                             Issue i = new Issue(c, year, month, toPay, 0);
-                            //uniqueness
-                            for(int j=0; j<_dataManager.Issues.size(); j++){
-                                if(_dataManager.Issues.get(j).equals(i)){
-                                    return "Monthly index already exists!";
+
+                            if(!_dataManager.Issues.isEmpty()) {
+                                for(int j=0; j < _dataManager.Issues.size(); j++){
+                                    if(_dataManager.Issues.get(j).Month == month && _dataManager.Issues.get(j).Year == year
+                                            && _dataManager.Issues.get(j).Client.equals(c)){
+                                        return "Monthly index already exists!";
+                                    }
                                 }
                             }
-                        
-                            _dataManager.Issues.add(i);
+
+                            _dataManager.getInvoicesList().add(i);
                             _dataManager.SaveChanges();
-                            return null;
+                            result = "Success";
                         }else{
-                            return "Client does not exist!";
+                            result = "Client does not exist!";
                         }
-                    }else{
-                        return valid;
+                    }
+                    else {
+                        result = "Invalid client data!";
                     }
                 }else{
-                    return "Money to pay can't be less than 0!";
+                    result = "Money to pay can't be less than 0!";
                 }
             }else{
-                return "Month can't be 0 or less!";
+                result = "Month can't be 0 or less!";
             }
         }else{
-            return "Year can't be 0 or less!";
+            result = "Year can't be 0 or less!";
         }
+        return result;
     }
     
     public String ListIssue(Client c){

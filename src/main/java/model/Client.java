@@ -39,11 +39,8 @@ public class Client {
         if(!(object instanceof Client)) return false;
         Client c = (Client)object;
 
+        if((c.idClient.equals(this.idClient))) return true;
 
-        
-        if((c.idClient.replaceAll("\\s","").equals(this.idClient.replaceAll("\\s","")))){
-           return true;}
-        
         return false;
     }
 
