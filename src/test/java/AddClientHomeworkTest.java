@@ -32,15 +32,15 @@ public class AddClientHomeworkTest extends TestCase {
 
     }
 
-    @Test
-    public void testAddClient2() throws Exception {
-
-        //name is empty
-        int oldSize = ctrl.get_dataManager().Clients.size();
-        String response = ctrl.AddClient("", "haha", "haha");
-        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
-
-    }
+//    @Test
+//    public void testAddClient2() throws Exception {
+//
+//        //name is empty
+//        int oldSize = ctrl.get_dataManager().Clients.size();
+//        String response = ctrl.AddClient("", "haha", "haha");
+//        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
+//
+//    }
 
     @Test
     public void testAddClient3() throws Exception {
@@ -81,24 +81,24 @@ public class AddClientHomeworkTest extends TestCase {
         assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
     }
 
-    @Test
-    public void testAddClient7() throws Exception {
-
-
-        //address contains illegal character
-        int oldSize = ctrl.get_dataManager().Clients.size();
-        String response = ctrl.AddClient("Elena", "str Nicaieri?", "5");
-        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
-    }
-
-    @Test
-    public void testAddClient8() throws Exception {
-
-        //id contains illegal character
-        int oldSize = ctrl.get_dataManager().Clients.size();
-        String response = ctrl.AddClient("Elena", "str Nicaieri", "5?");
-        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
-    }
+//    @Test
+//    public void testAddClient7() throws Exception {
+//
+//
+//        //address contains illegal character
+//        int oldSize = ctrl.get_dataManager().Clients.size();
+//        String response = ctrl.AddClient("Elena", "str Nicaieri?", "5");
+//        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
+//    }
+//
+//    @Test
+//    public void testAddClient8() throws Exception {
+//
+//        //id contains illegal character
+//        int oldSize = ctrl.get_dataManager().Clients.size();
+//        String response = ctrl.AddClient("Elena", "str Nicaieri", "5?");
+//        assertEquals(ctrl.get_dataManager().Clients.size(), oldSize);
+//    }
 
     @Test
     public void testAddClient9() throws Exception {

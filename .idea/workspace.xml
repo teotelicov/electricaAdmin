@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4feccde-89e8-47b8-95ea-9d3928a57c07" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client.txt" afterPath="$PROJECT_DIR$/client.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/issue.txt" afterPath="$PROJECT_DIR$/issue.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java" afterPath="$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="issue.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="issue.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/issue.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -105,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddClientHomeworkTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AddClientHomeworkTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="557">
+              <caret line="100" column="7" lean-forward="false" selection-start-line="83" selection-start-column="4" selection-end-line="100" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,13 +168,13 @@
         <option value="$PROJECT_DIR$/src/controller/ClientController.java" />
         <option value="$PROJECT_DIR$/src/test/java/AddClientTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/ClientController.java" />
         <option value="$PROJECT_DIR$/src/main/java/repository/DataManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/AddIndexToClientTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Client.java" />
         <option value="$PROJECT_DIR$/client.txt" />
         <option value="$PROJECT_DIR$/issue.txt" />
+        <option value="$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java" />
       </list>
     </option>
   </component>
@@ -578,7 +577,7 @@
       <workItem from="1523729699313" duration="603000" />
       <workItem from="1523877391332" duration="599000" />
       <workItem from="1524063871858" duration="7000" />
-      <workItem from="1524556652072" duration="5260000" />
+      <workItem from="1524556652072" duration="6113000" />
     </task>
     <servers />
   </component>
@@ -615,7 +614,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39548000" />
+    <option name="totallyTimeSpent" value="40401000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="855" y="0" width="1044" height="1047" extended-state="0" />
@@ -1044,16 +1043,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Issue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-521">
@@ -1098,16 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/AddClientTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/AddIndexToClientTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -1131,6 +1110,26 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AddClientTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AddClientHomeworkTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="100" column="7" lean-forward="false" selection-start-line="83" selection-start-column="4" selection-end-line="100" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
