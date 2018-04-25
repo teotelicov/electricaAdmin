@@ -1,0 +1,146 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: Issue</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">model</a> ]
+</div>
+
+<h1>Coverage Summary for Class: Issue (model)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Issue</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    33.3%
+  </span>
+  <span class="absValue">
+    (2/ 6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    27%
+  </span>
+  <span class="absValue">
+    (10/ 37)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package model;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.util.Objects;
+<i>4</i>&nbsp;
+<i>5</i>&nbsp;public class Issue {
+<i>6</i>&nbsp;	public Client Client;
+<i>7</i>&nbsp;    public int Year;
+<i>8</i>&nbsp;    public int Month;
+<i>9</i>&nbsp;    public float ToPay;
+<i>10</i>&nbsp;    public float Paid;
+<i>11</i>&nbsp;    
+<b class="nc"><i>12</i>&nbsp;    public Issue(){</b>
+<b class="nc"><i>13</i>&nbsp;        this.Client = new Client();</b>
+<b class="nc"><i>14</i>&nbsp;        this.Year = 0;</b>
+<b class="nc"><i>15</i>&nbsp;        this.Month = 0;</b>
+<b class="nc"><i>16</i>&nbsp;        this.ToPay = 0;</b>
+<b class="nc"><i>17</i>&nbsp;        this.Paid = 0;</b>
+<b class="nc"><i>18</i>&nbsp;    }</b>
+<i>19</i>&nbsp;    
+<b class="nc"><i>20</i>&nbsp;    public Issue(Issue issue){</b>
+<b class="nc"><i>21</i>&nbsp;        this.Client = issue.Client;</b>
+<b class="nc"><i>22</i>&nbsp;        this.Year = issue.Year;</b>
+<b class="nc"><i>23</i>&nbsp;        this.Month = issue.Month;</b>
+<b class="nc"><i>24</i>&nbsp;        this.ToPay = issue.ToPay;</b>
+<b class="nc"><i>25</i>&nbsp;        this.Paid = issue.Paid;</b>
+<b class="nc"><i>26</i>&nbsp;    }</b>
+<i>27</i>&nbsp;    
+<b class="fc"><i>28</i>&nbsp;    public Issue(Client client, int year, int month, float toPay, float paid){</b>
+<b class="fc"><i>29</i>&nbsp;        this.Client = client;</b>
+<b class="fc"><i>30</i>&nbsp;        this.Year = year;</b>
+<b class="fc"><i>31</i>&nbsp;        this.Month = month;</b>
+<b class="fc"><i>32</i>&nbsp;        this.ToPay = toPay;</b>
+<b class="fc"><i>33</i>&nbsp;        this.Paid = paid;</b>
+<b class="fc"><i>34</i>&nbsp;    }</b>
+<i>35</i>&nbsp;    
+<i>36</i>&nbsp;    @Override
+<i>37</i>&nbsp;    public String toString(){
+<b class="fc"><i>38</i>&nbsp;        String r = String.format(&quot;%s&quot; + System.getProperty(&quot;line.separator&quot;) + &quot;%d, %d, %2.0f, %2.0f&quot;, </b>
+<b class="fc"><i>39</i>&nbsp;                this.Client.toString(), this.Year, this.Month, this.ToPay, this.Paid);</b>
+<b class="fc"><i>40</i>&nbsp;        return r;</b>
+<i>41</i>&nbsp;    }
+<i>42</i>&nbsp;    
+<i>43</i>&nbsp;    @Override 
+<i>44</i>&nbsp;    public boolean equals(Object object){
+<b class="nc"><i>45</i>&nbsp;        if(object == null) return false;</b>
+<b class="nc"><i>46</i>&nbsp;        if(!(object instanceof Issue)) return false;</b>
+<b class="nc"><i>47</i>&nbsp;        Issue i = (Issue)object;</b>
+<b class="nc"><i>48</i>&nbsp;        if(i.Client == null) return false;</b>
+<b class="nc"><i>49</i>&nbsp;        if((i.Month == this.Month) &amp;&amp; (i.Year == this.Year) &amp;&amp; (i.Client.equals(this.Client))) return true;</b>
+<b class="nc"><i>50</i>&nbsp;        return false;</b>
+<i>51</i>&nbsp;    }
+<i>52</i>&nbsp;
+<i>53</i>&nbsp;    @Override
+<i>54</i>&nbsp;    public int hashCode() {
+<b class="nc"><i>55</i>&nbsp;        int hash = 3;</b>
+<b class="nc"><i>56</i>&nbsp;        hash = 71 * hash + Objects.hashCode(this.Client);</b>
+<b class="nc"><i>57</i>&nbsp;        hash = 71 * hash + this.Year;</b>
+<b class="nc"><i>58</i>&nbsp;        hash = 71 * hash + this.Month;</b>
+<b class="nc"><i>59</i>&nbsp;        hash = 71 * hash + Float.floatToIntBits(this.ToPay);</b>
+<b class="nc"><i>60</i>&nbsp;        hash = 71 * hash + Float.floatToIntBits(this.Paid);</b>
+<b class="nc"><i>61</i>&nbsp;        return hash;</b>
+<i>62</i>&nbsp;    }
+<i>63</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-04-25 08:46</div>
+</div>
+</body>
+</html>

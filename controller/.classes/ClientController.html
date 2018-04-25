@@ -1,0 +1,218 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: ClientController</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">controller</a> ]
+</div>
+
+<h1>Coverage Summary for Class: ClientController (controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">ClientController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    83.3%
+  </span>
+  <span class="absValue">
+    (5/ 6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    73.1%
+  </span>
+  <span class="absValue">
+    (49/ 67)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package controller;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.util.ArrayList;
+<i>4</i>&nbsp;
+<i>5</i>&nbsp;import repository.DataManager;
+<i>6</i>&nbsp;import model.*;
+<i>7</i>&nbsp;
+<i>8</i>&nbsp;public class ClientController {
+<i>9</i>&nbsp;	private DataManager _dataManager;
+<i>10</i>&nbsp;    
+<b class="fc"><i>11</i>&nbsp;    public ClientController(){</b>
+<b class="fc"><i>12</i>&nbsp;        _dataManager = new DataManager();</b>
+<b class="fc"><i>13</i>&nbsp;    }</b>
+<i>14</i>&nbsp;
+<i>15</i>&nbsp;    private String ValidateClient(String name, String address, String id){
+<b class="fc"><i>16</i>&nbsp;        boolean hasAlpha = false;</b>
+<b class="fc"><i>17</i>&nbsp;        if(!name.equals(&quot;&quot;) &amp;&amp; !address.equals(&quot;&quot;) &amp;&amp; !id.equals(&quot;&quot;)){</b>
+<b class="fc"><i>18</i>&nbsp;            for(int i=0; i&lt;name.length(); i++){</b>
+<b class="fc"><i>19</i>&nbsp;                if((!Character.isUpperCase(name.charAt(i))) &amp;&amp; (!Character.isLowerCase(name.charAt(i))) &amp;&amp; (!Character.isSpaceChar(name.charAt(i)))){</b>
+<b class="fc"><i>20</i>&nbsp;                    return &quot;Invalid character: &quot; + name.charAt(i);</b>
+<i>21</i>&nbsp;                }
+<b class="fc"><i>22</i>&nbsp;                if (Character.isAlphabetic(name.charAt(i))) {</b>
+<b class="fc"><i>23</i>&nbsp;                    hasAlpha = true;</b>
+<i>24</i>&nbsp;                }
+<i>25</i>&nbsp;            }
+<i>26</i>&nbsp;
+<b class="fc"><i>27</i>&nbsp;            if(!hasAlpha) {</b>
+<b class="nc"><i>28</i>&nbsp;                return &quot;Id, Name or address cannot be empty!&quot;;</b>
+<i>29</i>&nbsp;            }
+<b class="fc"><i>30</i>&nbsp;            return null;</b>
+<i>31</i>&nbsp;
+<i>32</i>&nbsp;        }else{
+<b class="nc"><i>33</i>&nbsp;            return &quot;Id, Name or address cannot be empty!&quot;;</b>
+<i>34</i>&nbsp;        }
+<i>35</i>&nbsp;    }
+<i>36</i>&nbsp;
+<i>37</i>&nbsp;    public DataManager get_dataManager() {
+<b class="fc"><i>38</i>&nbsp;        return _dataManager;</b>
+<i>39</i>&nbsp;    }
+<i>40</i>&nbsp;
+<i>41</i>&nbsp;    public String AddClient(String name, String address, String id){
+<i>42</i>&nbsp;        //validation
+<i>43</i>&nbsp;        String valid;
+<b class="fc"><i>44</i>&nbsp;        if((valid = ValidateClient(name, address,id)) != null){</b>
+<b class="nc"><i>45</i>&nbsp;            return valid;</b>
+<i>46</i>&nbsp;        }
+<b class="fc"><i>47</i>&nbsp;        Client c = new Client(name, address,id);</b>
+<i>48</i>&nbsp;        //uniqueness
+<b class="fc"><i>49</i>&nbsp;        for(int j=0; j&lt;_dataManager.Clients.size(); j++){</b>
+<b class="fc"><i>50</i>&nbsp;            if(_dataManager.Clients.get(j).equals(c)){</b>
+<b class="nc"><i>51</i>&nbsp;                return &quot;Client already exists!&quot;;</b>
+<i>52</i>&nbsp;            }
+<i>53</i>&nbsp;        }
+<i>54</i>&nbsp;        try{
+<b class="fc"><i>55</i>&nbsp;            _dataManager.Clients.add(c);</b>
+<b class="fc"><i>56</i>&nbsp;            _dataManager.SaveChanges();</b>
+<b class="fc"><i>57</i>&nbsp;            return null;</b>
+<b class="nc"><i>58</i>&nbsp;        }catch(Exception ex){</b>
+<b class="nc"><i>59</i>&nbsp;            return ex.getMessage();</b>
+<i>60</i>&nbsp;        }
+<i>61</i>&nbsp;    }
+<i>62</i>&nbsp;    
+<i>63</i>&nbsp;    public String AddClientIndex(Client c, int year, int month, float toPay){
+<b class="fc"><i>64</i>&nbsp;        String result = &quot;&quot;;</b>
+<b class="fc"><i>65</i>&nbsp;        if(year &gt; 0){</b>
+<b class="fc"><i>66</i>&nbsp;            if(month &gt; 0){</b>
+<b class="fc"><i>67</i>&nbsp;                if(toPay &gt;= 0){</b>
+<b class="fc"><i>68</i>&nbsp;                    if(ValidateClient(c.Name, c.Address, c.idClient) == null){</b>
+<i>69</i>&nbsp;                        //check if client exist
+<b class="fc"><i>70</i>&nbsp;                        Boolean exist = false;</b>
+<i>71</i>&nbsp;
+<b class="fc"><i>72</i>&nbsp;                        if (_dataManager.Clients.isEmpty()) {</b>
+<b class="nc"><i>73</i>&nbsp;                            return &quot;Client does not exist!&quot;;</b>
+<i>74</i>&nbsp;                        }
+<i>75</i>&nbsp;
+<b class="fc"><i>76</i>&nbsp;                        for(int i=0; i&lt;_dataManager.Clients.size(); i++){</b>
+<b class="fc"><i>77</i>&nbsp;                            if(_dataManager.Clients.get(i).equals(c)){</b>
+<b class="fc"><i>78</i>&nbsp;                                exist = true;</b>
+<b class="fc"><i>79</i>&nbsp;                                break;</b>
+<i>80</i>&nbsp;                            }
+<i>81</i>&nbsp;                        }
+<i>82</i>&nbsp;
+<b class="fc"><i>83</i>&nbsp;                        if(exist){</b>
+<b class="fc"><i>84</i>&nbsp;                            Issue i = new Issue(c, year, month, toPay, 0);</b>
+<i>85</i>&nbsp;
+<b class="fc"><i>86</i>&nbsp;                            if(!_dataManager.Issues.isEmpty()) {</b>
+<b class="fc"><i>87</i>&nbsp;                                for(int j=0; j &lt; _dataManager.Issues.size(); j++){</b>
+<b class="fc"><i>88</i>&nbsp;                                    if(_dataManager.Issues.get(j).Month == month &amp;&amp; _dataManager.Issues.get(j).Year == year</b>
+<b class="fc"><i>89</i>&nbsp;                                            &amp;&amp; _dataManager.Issues.get(j).Client.equals(c)){</b>
+<b class="fc"><i>90</i>&nbsp;                                        return &quot;Monthly index already exists!&quot;;</b>
+<i>91</i>&nbsp;                                    }
+<i>92</i>&nbsp;                                }
+<i>93</i>&nbsp;                            }
+<i>94</i>&nbsp;
+<b class="fc"><i>95</i>&nbsp;                            _dataManager.getInvoicesList().add(i);</b>
+<b class="fc"><i>96</i>&nbsp;                            _dataManager.SaveChanges();</b>
+<b class="fc"><i>97</i>&nbsp;                            result = &quot;Success&quot;;</b>
+<b class="fc"><i>98</i>&nbsp;                        }else{</b>
+<b class="fc"><i>99</i>&nbsp;                            result = &quot;Client does not exist!&quot;;</b>
+<i>100</i>&nbsp;                        }
+<b class="fc"><i>101</i>&nbsp;                    }</b>
+<i>102</i>&nbsp;                    else {
+<b class="fc"><i>103</i>&nbsp;                        result = &quot;Invalid client data!&quot;;</b>
+<i>104</i>&nbsp;                    }
+<i>105</i>&nbsp;                }else{
+<b class="fc"><i>106</i>&nbsp;                    result = &quot;Money to pay can&#39;t be less than 0!&quot;;</b>
+<i>107</i>&nbsp;                }
+<i>108</i>&nbsp;            }else{
+<b class="fc"><i>109</i>&nbsp;                result = &quot;Month can&#39;t be 0 or less!&quot;;</b>
+<i>110</i>&nbsp;            }
+<i>111</i>&nbsp;        }else{
+<b class="fc"><i>112</i>&nbsp;            result = &quot;Year can&#39;t be 0 or less!&quot;;</b>
+<i>113</i>&nbsp;        }
+<b class="fc"><i>114</i>&nbsp;        return result;</b>
+<i>115</i>&nbsp;    }
+<i>116</i>&nbsp;    
+<i>117</i>&nbsp;    public String ListIssue(Client c){
+<b class="nc"><i>118</i>&nbsp;        String s = &quot;&quot;;</b>
+<b class="nc"><i>119</i>&nbsp;        String pen = &quot;&quot;;</b>
+<b class="nc"><i>120</i>&nbsp;        Double total = 0.0;</b>
+<b class="nc"><i>121</i>&nbsp;        Issue last = null, beforeLast;</b>
+<b class="nc"><i>122</i>&nbsp;        for(int i=0; i&lt;_dataManager.Issues.size(); i++){</b>
+<b class="nc"><i>123</i>&nbsp;        	if(_dataManager.Issues.get(i).Client.equals(c)){</b>
+<b class="nc"><i>124</i>&nbsp;        	    s = &quot;&quot;;</b>
+<i>125</i>&nbsp;            	// pen += String.format(&quot;Year: %d, Month: %d, Penalty: %2.0f\n&quot;);
+<b class="nc"><i>126</i>&nbsp;            	 s += &quot;MONTH: &quot; + _dataManager.Issues.get(i).Month + &quot; YEAR: &quot;+ _dataManager.Issues.get(i).Year + &quot; TO PAY: &quot; + _dataManager.Issues.get(i).ToPay + &quot; PAID: &quot;</b>
+<b class="nc"><i>127</i>&nbsp;                         + _dataManager.Issues.get(i).Paid;</b>
+<b class="nc"><i>128</i>&nbsp;                System.out.println(s + &#39;\n&#39;);</b>
+<i>129</i>&nbsp;            }
+<i>130</i>&nbsp;        }
+<i>131</i>&nbsp;
+<b class="nc"><i>132</i>&nbsp;        return s;</b>
+<i>133</i>&nbsp;    }
+<i>134</i>&nbsp;    
+<i>135</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-04-25 08:46</div>
+</div>
+</body>
+</html>
